@@ -7,7 +7,7 @@ package power;
 
 /**
  *
- * @author Vimal Hari
+ * @author Isha
  */
 public class Power {
 
