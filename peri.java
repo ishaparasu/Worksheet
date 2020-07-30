@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Vimal Hari
+ * @author Isha
  */
 public class peri {
     public static void main(String [] args){
