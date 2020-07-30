@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author Vimal Hari
+ * @author Isha
  */
 public class Randomno {
 
