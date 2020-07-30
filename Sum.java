@@ -7,7 +7,7 @@ package sum;
 
 /**
  *
- * @author Vimal Hari
+ * @author Isha
  */
 public class Sum {
 
