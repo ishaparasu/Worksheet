@@ -7,7 +7,7 @@ package dispts;
 
 /**
  *
- * @author Vimal Hari
+ * @author Isha
  */
 public class Dispts {
 
