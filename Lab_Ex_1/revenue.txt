@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab_ex_1;
+import java.util.Scanner;
+/**
+ *
+ * @author Isha Parasu
+ */
+public class revenue {
+    public static void main(String[] args) {
+        Scanner o=new Scanner(System.in);
+        double dis;
+        System.out.println("Enter the unit price:");
+        double pri=o.nextDouble();
+        System.out.println("Enter the quantity:");
+        double quan=o.nextDouble();
+        double rev=quan*pri;
+        System.out.println("Revenue from sale:"+rev);
+        if(quan>=100 && quan<=120)
+            dis=(rev*10)/100;
+        else if(quan>120)
+            dis=(rev*15)/100;
+        else
+            dis=rev;
+        System.out.println("After discount:"+dis);
+       
+           
+       
+    }
+}

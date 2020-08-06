@@ -1,0 +1,32 @@
+ /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab_ex_1;
+import java.util.Scanner;
+/**
+ *
+ * @author Isha Parasu
+ */
+public class sumofoddeven {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int e=0,o=0;
+        System.out.println("Enter the size of the array:");
+        int n=obj.nextInt();
+        System.out.println("Enter the elements of the array:");
+        int a[]=new int[10];
+        for(int i=1;i<=n;i++)
+        {
+            a[i]=obj.nextInt();
+            if(a[i]%2==0)
+                e=e+a[i];
+            else
+                o=o+a[i];
+        }
+        System.out.println("Sum of odd numbers in the array is "+o);
+        System.out.println("Sum of even numbers in the array is "+e);
+    }
+}
+

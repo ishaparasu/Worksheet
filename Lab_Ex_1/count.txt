@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab_ex_1;
+import java.util.Scanner;
+/**
+ *
+ * @author Isha Parasu
+ */
+public class count {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Enter the limit:");
+        int l=obj.nextInt();
+        System.out.print("Count of numbers having 5 as a digit are ");
+        count1 a=new count1();
+        System.out.println(a.first(l));
+    }    
+}
+
+class count1
+{
+    int l;
+    public int first(int l)
+    {
+        int c=0;
+        for(int i=1;i<=l;i++)
+        {
+              c+=second(i);
+        }
+        return c;
+    }
+   
+    public int second(int i)
+    {
+        int c=0;
+        while(i>0)
+        {
+            if(i%10==5)
+                c++;
+            i=i/10;
+        }
+        return c;
+    }
+}

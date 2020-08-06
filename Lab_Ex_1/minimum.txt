@@ -1,0 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab_ex_1;
+import java.util.Scanner;
+/**
+ *
+ * @author Isha Parasu
+ */
+public class minimum {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        int a=obj.nextInt();
+        System.out.println("Enter the second number");
+        int b=obj.nextInt();
+        int c=(a<b)?a:b;
+        System.out.println("Minimum number:"+c);
+    }
+}
