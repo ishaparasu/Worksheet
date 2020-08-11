@@ -7,27 +7,27 @@ package Lab_ex_2;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author isha parasu B
  */
 public class Account_balance {
     public static void main(String[] args) { 
         Scanner obj=new Scanner(System.in);
-        account a=new account("19cse066","Baruni",0);
-        System.out.println("ID:"+a.getID());
-        System.out.println("Name"+a.getName());
-        System.out.println("Balance:"+a.getBalance());
+        account acc=new account("19cse073","isha",0);
+        System.out.println("ID is "+acc.getID());
+        System.out.println("Name  is "+acc.getName());
+        System.out.println("Balance is "+acc.getBalance());
         System.out.println("Enter the amount to be credited:");
-        int aa=obj.nextInt();
-        System.out.println("Balance:"+a.credit(aa));
+        int b=obj.nextInt();
+        System.out.println("Balance is "+acc.credit(b));
         System.out.println("Enter the amount to be debited:");
-        int aaa=obj.nextInt();
-        System.out.println("Balance:"+a.debit(aaa));
-        account a1=new account("19cse067","Darathi",1000);
+        int c=obj.nextInt();
+        System.out.println("Balance is "+acc.debit(c));
+        account accou=new account("19cse068","Dharsana",2000);
         System.out.println("Enter the amount to be transfered to the another account");
-        int aaaa=obj.nextInt();
-        System.out.println("Balance:"+a.transferTo(a1,aaaa));
-        System.out.println(a);
-        System.out.println(a1);
+        int d=obj.nextInt();
+        System.out.println("Balance:"+acc.transferTo(accou,d));
+        System.out.println(acc);
+        System.out.println(accou);
     
     }
     
@@ -42,7 +42,7 @@ class account
     {
         id=i;
         name=n;
-        balance=b;
+        balance=bb;
     }
     account(String i,String n)
     {
@@ -74,12 +74,12 @@ class account
             System.out.println("Amount exceeded balance");
         return balance;
     }
-    int transferTo(account a1,int amount)
+    int transferTo(account accou,int amount)
     {
         if(amount<=balance)
         {
             balance=balance-amount;
-            a1.balance=a1.balance+amount;
+            accou.balance=accou.balance+amount;
         }
         else
             System.out.println("Amount exceeded balance");
@@ -87,6 +87,6 @@ class account
     }
     public String toString()
    {
-       return "\nID:"+id+"\tName:"+name+"\tBalance:"+balance;
+       return "\nID is "+id+"\tName is "+name+"\tBalance is "+balance;
    }
 }
