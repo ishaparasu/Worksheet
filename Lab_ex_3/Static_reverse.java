@@ -7,24 +7,24 @@ package Lab_ex_3;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B
  */
 public class Static_reverse {
     public static void main(String[] args) {
         Scanner obj=new Scanner(System.in);
-        int array[]=new int[5];
+        int a[]=new int[5];
         System.out.println("Enter 5 elements of the array");
         for(int i=0;i<5;i++)
-            array[i]=obj.nextInt();
-        reverse(array);
+            a[i]=obj.nextInt();
+        reverse(a);
     }
-    static void reverse(int array[])
+    static void reverse(int a[])
     {
         int arr[]=new int[5];
         int j=5;
         for(int i=0;i<5;i++)
         {
-            arr[j-1]=array[i];
+            arr[j-1]=a[i];
             j=j-1;
         }
         System.out.println("Reversed array:");
