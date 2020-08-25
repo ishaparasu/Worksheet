@@ -7,19 +7,13 @@ package Lab_ex_5;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B
  */
 public class Stud_dept_clg {
     public static void  main(String[] args) {
-       /* Department obj=new Department();
-        Student obj1=new Student();
-        obj.getdeptdetails();
-        obj1.getstuddetails();
-        obj.displaydept();
-        obj1.displaystud();      */
-       Department[] d=new Department[10];
-       Student[] s=new Student[10];
-       for(int i=0;i<10;i++)
+       Department[] d=new Department[5];
+       Student[] s=new Student[5];
+       for(int i=0;i<5;i++)
        {
            d[i]=new Department();
            d[i].getdeptdetails();
@@ -33,44 +27,45 @@ public class Stud_dept_clg {
 
 class College
 {
-    String clgname;
-    int clgcode;
+    
     Scanner obj=new Scanner(System.in);
+    String cname;
+    int ccode;
     public void getclgdetails()
     {
-        System.out.println("Enter college name:");
-        clgname=obj.next();
+        System.out.println("Enter name of the college:");
+        cname=obj.next();
         System.out.println("Enter college code:");
-        clgcode=obj.nextInt(); 
+        ccode=obj.nextInt(); 
     }
     public void displayclg()
     {
         System.out.println("College details:");
-        System.out.println("Name:"+clgname+"\nCode:"+clgcode);
+        System.out.println("Name:"+cname+"\nCode:"+ccode);
     }
 }
 
 class Department extends College
 {
-    String deptname;
+    String dname;
     public void getdeptdetails()
     {
         super.getclgdetails();
-        System.out.println("Enter department name:");
-        deptname=obj.next();       
+        System.out.println("Enter name of the department:");
+        dname=obj.next();       
     }
     public void displaydept()
     {
         super.displayclg();
         System.out.println("Department details:");
-        System.out.println("Name:"+deptname);
+        System.out.println("Name:"+dname);
     }
 }
 
 class Student extends Department
 {
-    String name,roll_no;
-    double dm,dpsd,oops,ds,ce,total,average;
+    String name,rno;
+    double py,mat,phy,eg,che,tot,avg;
     public void getstuddetails()
     {
         
@@ -78,25 +73,25 @@ class Student extends Department
         name=obj.next();
         System.out.println("Enter student roll number:");
         roll_no=obj.next();
-        System.out.println("Enter dm amrk:");
-        dm=obj.nextDouble();
-        System.out.println("Enter dpsd amrk:");
-        dpsd=obj.nextDouble();
-        System.out.println("Enter oops amrk:");
-        oops=obj.nextDouble();
-        System.out.println("Enter ds amrk:");
-        ds=obj.nextDouble();
-        System.out.println("Enter ce amrk:");
-        ce=obj.nextDouble();        
-        total=dm+dpsd+oops+ds+ce;
-        average=total/5;
+        System.out.println("Enter python mark:");
+        py=obj.nextDouble();
+        System.out.println("Enter maths mark:");
+        mat=obj.nextDouble();
+        System.out.println("Enter physcis mark:");
+        phy=obj.nextDouble();
+        System.out.println("Enter eg mark:");
+        eg=obj.nextDouble();
+        System.out.println("Enter chemistry mark:");
+        che=obj.nextDouble();        
+        tot=py+mat+phy+eg+che;
+        avg=total/5;
     }
     public void displaystud()
     {
         
         System.out.println("Student details:");
-        System.out.println("Name:"+name+"\nRoll Number:"+roll_no+"\nDM mark:"+dm+"\nDPSD mark:"+dpsd+"\nOOPS mark:"+oops+"\nDS mark:"+ds+"\nCE mark:"+ce);
-        System.out.println("Total:"+total+"\nAverage:"+average);
+        System.out.println("Name:"+name+"\nRoll Number:"+rno+"\nPhthon mark:"+py+"\nMaths mark:"+mat+"\nPhysics mark:"+phy+"\nEG mark:"+eg+"\nChemistry mark:"+che);
+        System.out.println("Total:"+tot+"\nAverage:"+avg);
         
     }
 }
