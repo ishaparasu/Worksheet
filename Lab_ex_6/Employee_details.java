@@ -7,28 +7,28 @@ package Lab_ex_6;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B                     
  */
 public class Employee_details {
     public static void main(String[] args) {
-        employee e=new manager();
-        employee ee=new manager();
-        employee eee=new clerk();
-        System.out.println("Enter 1st Manager details:");
-        e.getdetails();
-        System.out.println("Enter 2nd manager details:");
-        ee.getdetails();
-        System.out.println("Enter clerk details:");
-        eee.getdetails();
+        System.out.println("Enter details of 1st manager:");
+        employee emp1=new manager();
+        emp1.getdetails();
+        System.out.println("Enter details of 2nd manager:");
+        employee emp2=new manager();
+        emp2.getdetails();
+        System.out.println("Enterdetails of the clerk:");
+        employee emp3=new clerk();
+        emp3.getdetails();
         System.out.println("1st manager details:");
-        System.out.println(e);
-        System.out.println("Salary:Rs."+e.CalcSalary());
+        System.out.println(emp1);
+        System.out.println("Salary is Rs."+emp1.CalcSalary());
         System.out.println("2nd manager details:");
-        System.out.println(ee);
-        System.out.println("Salary:Rs."+ee.CalcSalary());
+        System.out.println(emp2);
+        System.out.println("Salary is Rs."+emp2.CalcSalary());
         System.out.println("Clerk details:");
-        System.out.println(eee);
-        System.out.println("Salary:Rs."+eee.CalcSalary());
+        System.out.println(emp3);
+        System.out.println("Salary is Rs."+emp3.CalcSalary());
               
         
     }
@@ -38,42 +38,42 @@ public class Employee_details {
 abstract class employee
 {
     Scanner obj=new Scanner(System.in);
-    String name;
     int age;
+    String emp_name;
     float hourRate;
     void getdetails()
     {
         System.out.println("Enter the name:");
-        name=obj.next();
+        emp_name=obj.next();
         System.out.println("Enter the age:");
         age=obj.nextInt();
-        System.out.println("Enter the number of hours worked:");
+        System.out.println("Enter the worked hours:");
         hourRate=obj.nextFloat();
     }
     abstract double CalcSalary();
     public String toString()
     {
-        return "Name:"+name+"\nAge:"+age+"\nHours worked:"+hourRate; 
+        return "Name:"+emp_name+"\nAge:"+age+"\nWorked hours:"+hourRate; 
     }
 }
 
 class manager extends employee
 {
-    float m_salary;
-    double CalcSalary()
+    float manager_salary;
+    double CalcSalary()//1 hour=Rs.1500
     {
-        m_salary=hourRate*500;//considering 1 hour=Rs.500
-        return m_salary;
+        manager_salary=hourRate*1500;
+        return manager_salary;
     }   
 }
 
 class clerk extends employee
 {
-    float e_salary;
-    double CalcSalary()
+    float employee_salary;
+    double CalcSalary()//1 hour=Rs.750
     {
-        e_salary=hourRate*100;//considering 1 hour=Rs.100
-        return e_salary;
+        emplpyee_salary=hourRate*750;
+        return employee_salary;
     }
 
 }
