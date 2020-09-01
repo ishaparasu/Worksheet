@@ -29,12 +29,8 @@ public class Employee_details {
         System.out.println("Clerk details:");
         System.out.println(emp3);
         System.out.println("Salary is Rs."+emp3.CalcSalary());
-              
-        
     }
-    
 }
-
 abstract class employee
 {
     Scanner obj=new Scanner(System.in);
@@ -75,6 +71,5 @@ class clerk extends employee
         emplpyee_salary=hourRate*750;
         return employee_salary;
     }
-
 }
 
