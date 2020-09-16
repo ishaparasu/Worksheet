@@ -7,27 +7,27 @@ package Lab_ex_8;
 import java.util.Scanner;
 /**
  *
- * @author BaruniPriya T S
+ * @author Isha Parasu B`
  */
 public class Palindrome {
     public static void main(String[] args)
     {
-        String a="",str;
         Scanner obj=new Scanner(System.in);
+        String a="",s;
         System.out.println("Enter the string:");
-        str=obj.next();//input the string in str
-        int n=str.length();//store the length of the string in n
-        for(int i=n-1;i>=0;i--)
+        s=obj.next();
+        int len=s.length();
+        for(int i=len-1;i>=0;i--)
         {
-            a=a+str.charAt(i);//each character of the string 'str' is stored in string 'a' from last character to first character
+            a=a+s.charAt(i);
         }
-        if(a.equalsIgnoreCase(str))//comparing both the strings
+        if(a.equalsIgnoreCase(s))
         {
-            System.out.println("String is a palindrome");
+            System.out.println("It is a palindrome");
         }
         else
         {
-            System.out.println("String is not a palindrome");
+            System.out.println("It is not a palindrome");
         }
     }
     
