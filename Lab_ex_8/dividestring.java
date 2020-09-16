@@ -7,33 +7,33 @@ package Lab_ex_8;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B
  */
 public class dividestring {
 
     public static void main(String[] args) {
         Scanner obj=new Scanner(System.in);
+        int num=5;
+        int div;
+        int i;
         System.out.println("Enter the string:");
-        String str=obj.next();//"abcdefghijklmnopqrstuvwxy"
-        System.out.println("\nThe given string is "+str);
-        int len=str.length();
-        int n=5;//divide by 5 equal parts
-        int part;
-        if(len%n!=0) 
+        String s=obj.next();
+        System.out.println("The given string is "+str);
+        int l=s.length();
+        if(l%num!=0) 
         {
             System.out.println("Invalid Input");
-            System.out.println("String size is not divisible by n");
             return;
         }
-        part=len/n;//part=25/5=5
+        div=len/num;
         System.out.print("The given string is divided into "+n+" equal parts and they are:");
-        for(int i=1;i<len;i++) 
+        for(i=0;i<l;i++) 
         {
-            if(i%part==0)
+            if(i%div==0)
             {
                 System.out.print("\t");
             }
-            System.out.print(str.charAt(i));
+            System.out.print(s.charAt(i));
         }
     }
 
