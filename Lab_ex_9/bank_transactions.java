@@ -7,56 +7,35 @@ package Lab_ex_9;
 import java.util.Scanner;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B
  */
-public class User_defined_exception_handling 
-{
-    public static void main(String[] args)
-    {
-        User_defined_exception_handling o=new User_defined_exception_handling();
+public class bank_transactions {
+    public static void main(String[] args) {
         Scanner obj=new Scanner(System.in);
-        double acquiringbank=0;
-        System.out.print("Enter the amount present in your bank:Rs.");
-        double bank=obj.nextDouble();//Rs.1,00,000
-        System.out.print("Enter the amount to be credited from your bank:Rs.");
-        double credit=obj.nextDouble();//Rs.50,000
-        if(credit>bank)//if crediting amount is greater than the bank balance
-        {
-            System.out.println("OOPS!\nRs."+credit+" is not available in your bank");
-            System.out.println("Your bank balance is Rs."+bank);
-            return;
+        bank_transactions obj1=new bank_transactions();
+        System.out.println("Enter the amount in my bank:Rs.");
+        float bk=obj.nextFloat();
+        System.out.println("Enter the crediting amount Rs.");
+        float ct=obj.nextFloat();
+        try {
+            obj1.checker(bk,ct);
         }
-        try
-        {
-            o.checker(credit,bank,acquiringbank);//call of checker method by passing arguments
-        }
-        catch(creditexception e)
-        {
-            System.out.println(e);//Printing the user defined message
+        catch(bankcreditexception e) {
+            System.out.println(e);
         }
     }
-    void checker(double credit,double bank,double acquiringbank) throws creditexception
-    {
-        if(credit>49000)//if crediting amount exceeds Rs.49,000 --> throw user defined exception
-        {
-            throw new creditexception("Sorry!\nMore than Rs.49,000 can't be credited at a time");
+    void checker(double bk,double ct) throws bankcreditexception {
+        if(ct>49000) {
+            throw new bankcreditexception("Error:More than 49,000 rupees cannot be credited in one take");
         }
-        bank=bank-credit;//if crediting amount is less than Rs.49,000 --> the crediting amount is subtracted from your bank balance
-        acquiringbank+=credit;//And the crediting amount is transferred to the acquiring bank
-        System.out.println("Successfully credited!\nAmount present in your bank after crediting is Rs."+bank);//Printing your bank balance
+        bk=bk-ct;
+        System.out.println("Amount credited. Balance amount in my bank is Rs."+bk);
     }
 }
-
-class creditexception extends Exception
+class bankcreditexception extends Exception
 {
-    String message;
-    creditexception(String msg)
-    {
-        message=msg;//Storing the user defined message in a string
-    }
-    public String toString()
-    {
-        return message;//returning the string message
+   bankcreditexception(String msg) {
+        super(msg);
     }
 }
     
