@@ -6,52 +6,39 @@
 package Lab_ex_9;
 /**
  *
- * @author Baruni Priya T S
+ * @author Isha Parasu B
  */
-public class Buildin_exception_handling 
-{
-    public static void main(String[] args)
-    {
-        try
-        {
-           int num1=30;
-           int num2=0;
-           int result=num1/num2;//Error --> 30 is not divisible by zero
-           System.out.println("Result:"+result);        
+public class try_catch {
+    public static void main(String[] args) {
+        try {
+           int i=10,j=0;
+           int k=i/j;// 10 / 0 is not possible
+           System.out.println(k);        
         }
-        catch(ArithmeticException e)
-        {
+        catch(ArithmeticException e) {
             System.out.println(e);
         }
-        
-        try
-        {
-            int a[]=new int[10];
-            a[100]=100;//Error --> 100th index element can't be assigned a value as the array limit is 10 
-            System.out.println("Element in index 100:"+a[100]);
+        try {
+            int arr[]=new int[10];
+            arr[50]=1;// 50 th index element can't be accessed as the array has only 10 index
+            System.out.println(arr[50]);
         }
-        catch(ArrayIndexOutOfBoundsException e)
-        {
+        catch(ArrayIndexOutOfBoundsException e) {
             System.out.println(e);                       
-        }  
-        
-        try
-        {
-            int num=Integer.parseInt("BARUNI");//Error --> String can't be converted into integer using this statement
-            System.out.println(num);
         }
-        catch(NumberFormatException e)
-        {
+        try {
+            int n=Integer.parseInt("ISHA");// string can't be converted into integer format here
+            System.out.println(n);
+        }
+        catch(NumberFormatException e) {
             System.out.println(e);
         }     
-        
-        try
-        {
-            String str="BARUNI";
-            char c=str.charAt(10);//Error --> As the string length is 6, the 10th character in the string can't be accessed
+        try {
+            String s="Isha";
+            char c=s.charAt(18);// 18 th location is not possible as the string has only 4 characters
+            System.out.println(c);
         }
-        catch(StringIndexOutOfBoundsException e)
-        {
+        catch(StringIndexOutOfBoundsException e) {
             System.out.println(e);
         }
     }
