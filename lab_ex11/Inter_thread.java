@@ -16,14 +16,14 @@ public class Inter_thread {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner obj=new Scanner(System.in);
-        Account a=new Account();
-        System.out.println("Total amount in account is Rs."+a.TotalAmount);
+        Account acc=new Account();
+        System.out.println("Total amount in account is Rs."+acc.TotalAmount);
         System.out.print("Enter the amount to be deposited:");
         double DepositAmount=obj.nextDouble();
         System.out.print("Enter the amount to be credited: ");
         double CreditAmount=obj.nextDouble();
-        Deposit d=new Deposit(a,DepositAmount);	
-        Credit c=new Credit(a,CreditAmount);
+        Deposit d=new Deposit(acc,DepositAmount);	
+        Credit cr=new Credit(acc,CreditAmount);
         d.start();
         try 
         {
@@ -66,10 +66,10 @@ class Account
 class Deposit extends Thread
 {
     double amount;
-    Account a;
-    Deposit(Account a,double amount)
+    Account ac;
+    Deposit(Account ac,double amount)
     {
-        this.a=a;
+        this.ac=ac;
         this.amount=amount;
         //new Thread(this).start();
     }
@@ -81,10 +81,10 @@ class Deposit extends Thread
 class Credit extends Thread
 {
     double amount;
-    Account a;
+    Account ac;
     Credit(Account a,double amount) 
     {
-        this.a=a;
+        this.ac=ca;
         this.amount=amount;
         //new Thread(this).start();
     }
