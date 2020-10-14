@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Sonal L R
+ * @author Isha Parasu
  */
 public class Inter_thread {
     /**
