@@ -21,23 +21,23 @@ public class Threads {
         try 
         {
             System.out.println("Enter the count of numbers:");
-            int n=obj.nextInt(); 
-            int a[]=new int[n]; 
+            int num=obj.nextInt(); 
+            int arr[]=new int[n]; 
             System.out.println("Enter the numbers:");
-            for(int i=0;i<n;i++)
+            for(int i=0;i<num;i++)
                 a[i]=obj.nextInt();
-            thread1 p=new thread1(n,a);
-            Thread t1=new Thread(p); 
-            thread2 q=new thread2(n,a);
-            Thread t2=new Thread(q);
-            thread3 r=new thread3(n,a);
-            Thread t3=new Thread(r);
-            t1.start(); 
-            t1.join();  
-            t2.start();
-            t2.join();
-            t3.start();
-            t3.join();
+            thread1 x=new thread1(num,arr);
+            Thread th1=new Thread(x); 
+            thread2 y=new thread2(num,arr);
+            Thread th2=new Thread(y);
+            thread3 z=new thread3(num,arr);
+            Thread th3=new Thread(z);
+            th1.start(); 
+            th1.join();  
+            th2.start();
+            th2.join();
+            th3.start();
+            th3.join();
         }
         catch(InterruptedException e) 
         {
@@ -47,37 +47,37 @@ public class Threads {
 }
 class thread1 implements Runnable 
 {
-    public int n;
-    public int[] a;
-    public thread1(int n,int[] a) 
+    public int num;
+    public int[] arr;
+    public thread1(int num,int[] arr) 
     {
-        this.n=n;
-        this.a=a;
+        this.num=num;
+        this.arr=arr;
     }
     public void run() 
     {
         System.out.print("Entered numbers are: ");
-        for(int i=0;i<n;i++)
-            System.out.print(a[i]+" ");
+        for(int i=0;i<num;i++)
+            System.out.print(arr[i]+" ");
         System.out.println();
     }
 }
 class thread2 extends thread1 implements Runnable 
 {
-    public thread2(int n,int[] a) 
+    public thread2(int num,int[] arr) 
     {
-        super(n,a);
+        super(num,arr);
     }
     public void run() 
     {
         boolean flag=false;
         System.out.print("Number(s) divisible by 5 are: ");
-        for(int i=0;i<a.length;i++) 
+        for(int i=0;i<arr.length;i++) 
         {
             if(a[i]%5==0) 
             {
                 flag=true; 
-                System.out.print(a[i]+"  ");       
+                System.out.print(arr[i]+"  ");       
             }
         }
         if(flag==false) 
@@ -87,19 +87,19 @@ class thread2 extends thread1 implements Runnable
 }
 class thread3 extends thread2 implements Runnable 
 {
-    public thread3(int n,int[] a) 
+    public thread3(int num,int[] arr) 
     {
-        super(n,a);
+        super(num,arr);
     }
     public void run() 
     {
         int sum=0,avg=0;
-        System.out.print("Average of "+n+" numbers is: ");
-        for(int i=0;i<n;i++) 
+        System.out.print("Average of "+num+" numbers is: ");
+        for(int i=0;i<num;i++) 
         {
-            sum=sum+a[i];
+            sum=sum+arr[i];
         }
-        avg=sum/n;
+        avg=sum/num;
         System.out.println(avg);
     }
 }
