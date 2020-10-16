@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Sonal L R
+ * @author isha parasu
  */
 public class Generic_method {
     /**
