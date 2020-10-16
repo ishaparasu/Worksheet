@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Sonal L R
+ * @author isha parasu
  */
 public class Generic_function {
     /**
@@ -19,8 +19,8 @@ public class Generic_function {
         Integer[] numbers={20,4,98,30,73,66,87}; 
         String[] names={"Isha","Kanisha","Yogi","Kamalika","Divya","Deepthi"};
         Character[] alphabets={'a','b','c','d','e'};
-        Double[] dnumbers={100.00,234.56,34.78,3253.000,743.4,63.56};
-        Float[] fnumbers={21.2f,45.4f,63.5f,5912.7f};
+        Double[] dnum={100.00,234.56,34.78,3253.000,743.4,63.56};
+        Float[] fnum={21.2f,45.4f,63.5f,5912.7f};
         
         search s=new search();
         System.out.println("Available types: \n1>Integer \n2>String \n3>Character \n4>Double \n5>Float");
@@ -46,12 +46,12 @@ public class Generic_function {
             case 4:
                 System.out.println("Enter the number to be searched:");
                 double value4=obj.nextDouble();
-                s.search(value4,dnumbers);
+                s.search(value4,dnum);
                 break;
             case 5:
                 System.out.println("Enter the number to be searched:");
                 float value5=obj.nextFloat();
-                s.search(value5,fnumbers);
+                s.search(value5,fnum);
                 break;
         }
     }
