@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Sonal L R
+ * @author isha parasu
  */
 public class Registration_form {
     JFrame f;
