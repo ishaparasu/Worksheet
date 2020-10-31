@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Sonal L R
+ * @author isha parasu
  */
 public class Background_color extends JFrame implements ActionListener {
     JButton b1,b2,b3,b4,b5;
